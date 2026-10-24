@@ -1,0 +1,38 @@
+import { Router } from 'express';
+
+import  {
+    findAllInvoices,
+    findInvoiceById
+} from './invoice.service.ts';
+
+const  router = Router(); 
+
+
+
+router.get('/', (_request, response) => {
+    const invoices = findAllInvoices();
+
+  response.status(200).json(invoices);
+});
+
+
+
+router.get('/api/invoices/:id', (request, response) => {
+  const id = Number(request.params.id);
+
+  findInvoiceById(id);
+
+const invoice = invoices.find((invoice) => invoice.id === id); {
+
+if (!invoice) response.status(404).json({
+    error: {
+        status: 404,
+        message: 'Fatura não encontrada.'
+    }
+    });
+}
+
+response.status(200).json(invoice);
+});
+
+export default router;

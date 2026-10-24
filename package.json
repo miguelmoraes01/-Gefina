@@ -1,10 +1,6 @@
 {
-    "name": "Gefina",
-    "version": "0.0.0",
-    "description": "Sistema de gestão de contas a receber.",
-    "author": "miguel moraes",
-    "type": "module",
-    "scripts": {
-        "dev": "node --watch ./server.ts" 
-    }
+    "name": "gefina",
+    "version":  "0.0.0",
+    "description": "Sistema de gestao de contas a receber",
+    "author": "miguel moraes"
 }
